@@ -12,17 +12,17 @@ features:
   bot_user:
     display_name: Slack Exporter
     always_online: true
-  # slash_commands:
-  #   - command: /export-channel
-  #     description: Export the contents of this channel in either text or JSON format
-  #     usage_hint: json|text
-  #     url: https://YOUR_HOST_URL_HERE/slack/export-channel
-  #     should_escape: false
-  #   - command: /export-replies
-  #     description: Export reply threads in either text or JSON format
-  #     usage_hint: json|text
-  #     url: https://YOUR_HOST_URL_HERE/slack/export-replies
-  #     should_escape: false
+  slash_commands:
+    - command: /export-channel
+      description: Export the contents of this channel in either text or JSON format
+      usage_hint: json|text
+      url: https://YOUR_HOST_URL_HERE/slack/events/export-channel
+      should_escape: false
+    - command: /export-replies
+      description: Export reply threads in either text or JSON format
+      usage_hint: json|text
+      url: https://YOUR_HOST_URL_HERE/slack/events/export-replies
+      should_escape: false
 oauth_config:
   scopes:
     user:
